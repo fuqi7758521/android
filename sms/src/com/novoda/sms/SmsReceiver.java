@@ -13,10 +13,11 @@ public class SmsReceiver  extends BroadcastReceiver{
     public void onReceive(Context context, Intent intent) 
     {
         //---get the SMS message passed in---
-        Bundle bundle = intent.getExtras();        
+        Bundle bundle = intent.getExtras();  
+      
         SmsMessage[] msgs = null;
         String str = "";            
-        if (bundle != null)
+        if (bundle != null) 
         {
             //---retrieve the SMS message received---
             Object[] pdus = (Object[]) bundle.get("pdus");
